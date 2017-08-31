@@ -1,7 +1,6 @@
 import Card  from "../components/shared/card/Card";
 import Vue from 'vue';
-
-let EventBus = new Vue();
+import EventBus from "../../business/event-bus"
 export default {
   name: "AppStage",
   components: {
@@ -25,7 +24,12 @@ export default {
   created:function() {
      this.$on('cardButtonClicked', (value)=>{
            console.log('AppStage--- created card-button-clicked: ', value);
-     })
+     });
+
+
+		EventBus.$on('buttonClicked', (value) => {
+			console.log('AppStage--- created buttonClicked : ', value);
+		});
   },
 
 

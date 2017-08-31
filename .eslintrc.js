@@ -28,7 +28,7 @@ module.exports = {
     "comma-dangle": "off",
     "no-underscore-dangle": "off",
     "global-require": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": "off",
     // don't require .vue extension when importing
     "import/extensions": [
       "error",
