@@ -1,18 +1,12 @@
-import * as scActions from './actions';
-import * as scGetters from './getters';
-import * as scMutations from './mutations';
-import * as scState from './state';
-
-import Vuex, { Store } from 'vuex';
-import { createEpicMiddleware, actionMutations } from 'vuex-rx';
-import rootReducer from './sc.reducer';
-import rootEpic from './epics';
-
+import * as scActions from './sc.actions';
+import * as scEpic from './sc.epic';
+import * as scReducer from './sc.reducer';
+import * as scState from './sc.state';
 
 
 export default {
     scState,
-    scGetters,
-    scMutations,
+    scEpic,
+    scReducer,
     scActions,
 }

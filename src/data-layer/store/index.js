@@ -5,8 +5,6 @@
 import Vue from 'vue'
 import Vuex, { Store } from 'vuex'
 import { createEpicMiddleware, actionMutations } from 'vuex-rx';
-import * as StyleCollective  from './modules/styleCollections';
-
 
 import rootReducer from './reducers'
 import rootEpic from './epics'
@@ -25,4 +23,4 @@ Vue.use(createEpicMiddleware(store), {
 
 
 
-export default store
+export default store;

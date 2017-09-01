@@ -3,6 +3,9 @@
        <h1> Got Vue.JS!</h1>
         <Card
         @cardButtonClicked="handleButton"
-        :msgClick="didTheThing" :title="titleMsg" :message="bodyMsg"></Card>
+        :msgClick="didTheThing" :title="card1.titleMsg" :message="card1.bodyMsg"></Card>
+        <Card
+        @cardButtonClicked="handleButton"
+        :msgClick="didTheThing" :title="card2.titleMsg" :message="ids.length>0?collectionEntities[ids[0]].length.toString():'nada'"></Card>
   </div>
 </div>

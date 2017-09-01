@@ -6,8 +6,7 @@
 const scState = {
   ids: [],
   collectionEntities: {},
-  fetching: false,
-  fetched: false,
+  fetching: false
 }
 
 export default scState;

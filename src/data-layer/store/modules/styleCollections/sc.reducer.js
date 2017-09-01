@@ -1,20 +1,33 @@
 /**
  * Created by willstreeter on 8/31/17.
  */
-import { requestReposByUser, receviedReposByUser }	from './sc.action';
-import { scState } from './sc.state'
+ 
+import { handleActions } from 'vuex-rx';
+import { requestGaramentCollection, receviedGaramentCollection } from './sc.actions';
 
-import {  handleActions } from 'vuex-rx';
+import  scState  from './sc.state';
 
-export const reducer = handleActions({
+const StyleCollectiveReducer = handleActions({
+	[requestGaramentCollection]: (state) =>  ({...state, fetching:true}),
 
-	[requestReposByUser]: (state) => {
-		return { ...state, reposByUser: [] }
-	},
+	[receviedGaramentCollection]:(state, payload) => {
+	    const newIds = [];
+	    let newEntities = {};
+	    if(!state.ids.includes(payload.metadata.category.id)){
+            newIds.push(payload.metadata.category.id);
+            newEntities = {[payload.metadata.category.id]:payload.products};
+	    }else{
+	        newEntities ={ [payload.metadata.category.id]:
+				            [...state.collectionEntities[payload.metadata.category.id],
+				             ...payload.products] };
+	    }
 
-	[receviedReposByUser]: (state, payload) => {
-		return { ...state, reposByUser: payload }
+		return { ...state, ids:[...state.ids, ...newIds],  collectionEntities:newEntities, fetching:false}
 	}
 
-}, scState)
+}, scState);
+
+
+export default StyleCollectiveReducer;
+
 
