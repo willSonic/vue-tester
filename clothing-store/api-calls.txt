@@ -1,0 +1,10 @@
+https://www.shopstylecollective.com/account
+
+http://api.shopstyle.com/api/v2/products?pid=uid5225-39800235-6&fts=red+dress&offset=0&limit=50
+
+http://api.shopstyle.com/api/v2/products?pid=uid5225-39800235-6&fts=mens+jackets&offset=0&limit=50
+
+http://api.shopstyle.com/api/v2/products?pid=uid5225-39800235-6&fts=mens+shoes&offset=0&limit=50  
+
+
+http://api.shopstyle.com/api/v2/products?pid=uid5225-39800235-6&fts=mens+jeans&offset=0&limit=50

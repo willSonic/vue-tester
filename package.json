@@ -29,9 +29,12 @@
   },
   "dependencies": {
     "lodash.get": "^4.4.2",
+    "rxjs": "^5.4.3",
     "vue": "^2.4.2",
     "vue-router": "^2.7.0",
-    "vuex": "^2.4.0"
+    "vue-rx": "^3.3.0",
+    "vuex": "^2.4.0",
+    "vuex-rx": "0.0.2"
   },
   "devDependencies": {
     "autoprefixer": "6.7.2",
